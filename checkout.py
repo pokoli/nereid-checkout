@@ -721,7 +721,7 @@ class Checkout(ModelView):
             profile_wiz.card_info.expiry_month = \
                 credit_card_form.expiry_month.data
             profile_wiz.card_info.expiry_year = \
-                credit_card_form.expiry_year.data
+                str(credit_card_form.expiry_year.data)
             profile_wiz.card_info.csc = credit_card_form.cvv.data
 
             with Transaction().set_context(return_profile=True):
